@@ -17,10 +17,19 @@
  */
 
 / {
+    macros {
+        left_desktop: left_desktop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>;
+            label = "LEFT_DESKTOP";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        alphabet {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
             // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
@@ -28,10 +37,10 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp ESC         &kp Q  &kp W  &kp E   &kp R     &kp T                                                             &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D   &kp F     &kp G                                                             &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT       &kp Z  &kp X  &kp C   &kp V     &kp B      &kp LEFT_BRACKET  &kp LSHFT  &mo 1  &kp RIGHT_BRACKET  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
-                              &tog 1  &kp LWIN  &kp SPACE  &kp LEFT_ALT      &mo 1      &mo 2  &kp ENTER          &kp SPACE  &kp TILDE  &kp RALT
+&kp ESC               &kp Q  &kp W  &kp E   &kp R     &kp T                                                             &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp LEFT_SHIFT        &kp A  &kp S  &kp D   &kp F     &kp G                                                             &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&mt LEFT_CONTROL TAB  &kp Z  &kp X  &kp C   &kp V     &kp B      &kp LEFT_BRACKET  &kp LSHFT  &mo 1  &kp RIGHT_BRACKET  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
+                                    &tog 1  &kp LWIN  &kp SPACE  &kp LEFT_ALT      &mo 1      &mo 2  &kp ENTER          &kp SPACE  &kp TILDE  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -45,10 +54,10 @@
             //                       |      |      |      |      |      |      |      |      |      |      |      |      |
 
             bindings = <
-&trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &bt BT_SEL 3  &bt BT_SEL 4  &trans                                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                                  &kp PAGE_UP    &kp HOME        &kp UP_ARROW  &kp END     &kp C_VOLUME_UP  &kp DELETE
+&trans  &trans  &trans      &bt BT_SEL 3  &bt BT_SEL 4  &trans                                        &kp PAGE_DOWN  &kp LEFT        &kp DOWN      &kp RIGHT   &kp C_VOL_DN     &kp INSERT
+&trans  &trans  &trans      &trans        &trans        &trans        &trans  &trans  &trans  &trans  &kp C_PAUSE    &kp C_PREVIOUS  &kp C_PLAY    &kp C_NEXT  &kp C_MUTE       &kp PRINTSCREEN
+                            &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans         &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
