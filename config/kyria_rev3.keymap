@@ -34,19 +34,6 @@
             key-positions = <16 19>;
         };
 
-        // Combo for Ctrl + Shift + Left Arrow (Word Select Left)
-        word_select_left {
-            bindings = <&kp LEFT>;
-            key-positions = <&kp LEFT_SHIFT &kp LEFT_CONTROL &kp LEFT_ARROW>;
-            timeout-ms = <50>;
-        };
-    
-        // Combo for Ctrl + Shift + Right Arrow (Word Select Right)
-        word_select_right {
-            bindings = <&kp RIGHT>;
-            key-positions = <&kp LEFT_SHIFT &kp LEFT_CONTROL &kp RIGHT_ARROW>;
-            timeout-ms = <50>;
-        };
     };
 
     keymap {
