@@ -8,11 +8,11 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 0.2.0
       import: app/west.yml
     # support nice_oled and nice_epaper
     - name: nice-view-gem
       remote: carlosarceleon                       #new entry
-      revision: try_fix                      #new entry
+      revision: main                      #new entry
   self:
     path: config
