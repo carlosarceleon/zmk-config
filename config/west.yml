@@ -3,16 +3,16 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # support nice_oled and nice_epaper
-    - name: gpeye                         #new entry
-      url-base: https://github.com/GPeye  #new entry
+    - name: carlosarceleon                         #new entry
+      url-base: https://github.com/carlosarceleon  #new entry
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     # support nice_oled and nice_epaper
-    - name: mario-peripheral-animation   #new entry
-      remote: gpeye                       #new entry
+    - name: nice-view-gem
+      remote: carlosarceleon                       #new entry
       revision: main                      #new entry
   self:
     path: config
