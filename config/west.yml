@@ -13,6 +13,6 @@ manifest:
     # support nice_oled and nice_epaper
     - name: nice-view-gem
       remote: carlosarceleon                       #new entry
-      revision: main                      #new entry
+      revision: try_fix                      #new entry
   self:
     path: config
