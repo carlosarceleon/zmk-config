@@ -3,17 +3,17 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # support nice_oled and nice_epaper
-    - name: carlosarceleon                         #new entry
-      url-base: https://github.com/carlosarceleon  #new entry
+    - name: xenosf                         #new entry
+      url-base: https://github.com/xenosf  #new entry
   projects:
     - name: zmk
       remote: zmkfirmware
       # revision: 241ff39556b3685c9344c4c22fd9a655af8eb3ba
       revision: main
       import: app/west.yml
-    # # This is not working, remove in next build
-    # - name: nice-view-gem
-    #   remote: carlosarceleon                       #new entry
-    #   revision: fix_with_codex                      #new entry
+    # This is not working, remove in next build
+    - name: nice-view-gem
+      remote: xenosf                       #new entry
+      revision: main                      #new entry
   self:
     path: config
