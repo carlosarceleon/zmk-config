@@ -11,9 +11,9 @@ manifest:
       # revision: 241ff39556b3685c9344c4c22fd9a655af8eb3ba
       revision: main
       import: app/west.yml
-    # support nice_oled and nice_epaper
-    - name: nice-view-gem
-      remote: carlosarceleon                       #new entry
-      revision: fix_with_codex                      #new entry
+    # # This is not working, remove in next build
+    # - name: nice-view-gem
+    #   remote: carlosarceleon                       #new entry
+    #   revision: fix_with_codex                      #new entry
   self:
     path: config
