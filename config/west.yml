@@ -3,20 +3,20 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # support nice_oled and nice_epaper
-    - name: carlosarceleon                         #new entry
-      url-base: https://github.com/carlosarceleon  #new entry
-    - name : M165437                           #new entry
+    - name: carlosarceleon                         
+      url-base: https://github.com/carlosarceleon  
+    - name : M165437                           
       url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
-      # revision: main
+      revision: main # LVGL v9 compatible
+      # revision: 0.2 # LVGL v8 compatible
       import: app/west.yml
-    # This is not working, remove in next build
+    # Nice-View-Gem
     - name: nice-view-gem
-      remote: M165437                   #new entry
-      revision: main  # LVGL v8 compatible
+      remote: M165437                   
+      revision: main  # LVGL v9 compatible
       # revision: 7794ebf7f75d7e16cb05240bcffe6c5a45ef5b44  # LVGL v8 compatible
   self:
     path: config
