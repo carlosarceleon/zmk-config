@@ -10,13 +10,18 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main # LVGL v9 compatible
+      # Pinned to main @ 2026-08-21. Includes the deep-sleep wake / battery-drain
+      # fix for split centrals (zmkfirmware/zmk#3207): zephyr v4.1.0+zmk-fixes
+      # reverts 1d1eb5d, plus ls0xx SPI fix 9df4b12 and BT fix 10ba6d0.
+      revision: 641514a97db345f499dd50b0360e594270f008fe # LVGL v9 compatible
+      # revision: main
       # revision: 0.2 # LVGL v8 compatible
       import: app/west.yml
-    # Nice-View-Gem
+    # Nice-View-Gem — keep pinned to a revision matching ZMK (see gem README)
     - name: nice-view-gem
-      remote: M165437                   
-      revision: main  # LVGL v9 compatible
+      remote: M165437
+      revision: 0a50fe209d929c916c5664c6affd0f4977c6b012  # main @ 2026-02-27, LVGL v9 compatible
+      # revision: main
       # revision: 7794ebf7f75d7e16cb05240bcffe6c5a45ef5b44  # LVGL v8 compatible
   self:
     path: config
