@@ -17,8 +17,10 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
+# nice!nano v2. Zephyr 4.1 requires the `//zmk` board variant; bare `nice_nano`
+# skips the ZMK board overlays (breaks nice_view_spi). v1 hardware: nice_nano@1//zmk
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: kyria_rev3_left nice_view_adapter nice_view_gem
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: kyria_rev3_right nice_view_adapter nice_view_gem
