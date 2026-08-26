@@ -17,11 +17,15 @@ manifest:
       # revision: main
       # revision: 0.2 # LVGL v8 compatible
       import: app/west.yml
-    # Nice-View-Gem — keep pinned to a revision matching ZMK (see gem README)
-    - name: nice-view-gem
-      remote: M165437
-      revision: 0a50fe209d929c916c5664c6affd0f4977c6b012  # main @ 2026-02-27, LVGL v9 compatible
-      # revision: main
-      # revision: 7794ebf7f75d7e16cb05240bcffe6c5a45ef5b44  # LVGL v8 compatible
+    # nice-view-animations: personal fork of M165437/nice-view-gem (@ 0a50fe2)
+    # with the peripheral animation swapped from the crystal to "meatballs".
+    # Keep its base revision matching ZMK, per the gem README.
+    - name: nice-view-animations
+      remote: carlosarceleon
+      revision: 5545b9dceb04b4c367fc40f203e071f50342cd13
+      # upstream fallback:
+      # - name: nice-view-gem
+      #   remote: M165437
+      #   revision: 0a50fe209d929c916c5664c6affd0f4977c6b012
   self:
     path: config
